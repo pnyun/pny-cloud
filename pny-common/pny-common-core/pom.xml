@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>pny-common-core</artifactId>
+	<packaging>jar</packaging>
+
+	<name>pny-common-core</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>com.pny</groupId>
+		<artifactId>pny-common</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<!-- 模块依赖 -->
+		<dependency>
+			<groupId>com.pny</groupId>
+			<artifactId>pny-common-domain</artifactId>
+			<version>${pny.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pny</groupId>
+			<artifactId>pny-common-util</artifactId>
+			<version>${pny.version}</version>
+		</dependency>
+		<!-- spring web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- spring boot 启动 需要依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+		<!-- 在使用log4j 2.10.x时候，如果只是添加 log4j-core.2.10.x.jar和log4j-api-2.10.x，同时配置文件采用 
+			.yaml文件，则会报错:RROR StatusLogger No log4j2 configuration file found 只需要在依赖中添加snakeyaml.x.y.z.jar 
+			jackson-databind.x.y.z.jar jackson-dataformat-yaml.x.y.z.jar -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+		</dependency>
+		<!-- 切面@Pointcut 用于读写分离 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<!-- Druid是Java语言中最好的数据库连接池。Druid能够提供强大的监控和扩展功能。 -->
+		<!-- https://github.com/alibaba/druid -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+	</dependencies>
+</project>

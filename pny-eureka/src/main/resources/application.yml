@@ -1,0 +1,15 @@
+spring:
+  security:
+    user:
+      name: pny
+      password: pny
+  application:
+    name: pny-eureka
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

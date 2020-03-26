@@ -1,0 +1,17 @@
+server:
+  port: 8000
+# 注册中心配置 eviction-interval-timer-in-ms 间隔60s清理服务
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://pny:pny@${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    eviction-interval-timer-in-ms: 60000
+    enable-self-preservation: false
+    renewal-percent-threshold: 0.9
+

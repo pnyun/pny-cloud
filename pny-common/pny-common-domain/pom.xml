@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>pny-common-domain</artifactId>
+	<packaging>jar</packaging>
+
+	<name>pny-common-domain</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>com.pny</groupId>
+		<artifactId>pny-common</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+
+	<dependencies>
+		<!-- 模块依赖 -->
+		<dependency>
+			<groupId>com.pny</groupId>
+			<artifactId>pny-common-util</artifactId>
+			<version>${pny.version}</version>
+		</dependency>
+		<!-- mybatis 增强工具包，简化 CRUD 操作 -->
+		<!-- https://gitee.com/baomidou/mybatis-plus -->
+		<!-- 考虑升级到<mybatis-plus.version>3.0-alpha</mybatis-plus.version>，全面支持lambda表达式 -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus</artifactId>
+			<version>${mybatis-plus.version}</version>
+		</dependency>
+
+		<dependency>
+          <groupId>javax.validation</groupId>
+          <artifactId>validation-api</artifactId>
+          <version>2.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.2.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>1.2.0.Final</version>
+			<scope>provided</scope>
+		</dependency>
+  </dependencies>
+</project>

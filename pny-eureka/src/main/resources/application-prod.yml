@@ -1,0 +1,17 @@
+server:
+  port: 8000
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://pny:pny@192.168.0.1:8000/eureka/,http://pny:pny@192.168.0.2:8000/eureka/
+  server:
+    eviction-interval-timer-in-ms: 4000
+    enable-self-preservation: false
+    renewal-percent-threshold: 0.9
+

@@ -1,6 +1,6 @@
 # pny-cloud
 #### 项目介绍
-
+spring-cloud生态微服务框架，可用于初学spring-cloud童鞋。
 
 
 #### 软件架构
@@ -18,7 +18,7 @@
 
 ------
 ### 系统架构
-![输入图片说明]()
+
 ### 组织结构
 ``` lua
 pny-cloud
@@ -36,7 +36,7 @@ pny-cloud
 └── pny-demo -- 示例模块(包含一些示例代码等)
 ```
 #### 项目启动说明
-1. 启动 pny-pny-config
+1. 启动 pny-eureka， pny-pny-config
 2. 启动 pny-server中的业务微服务：pny-server-upms....
 3. 启动 pny-client中的聚合接口：pny-client-admin...
 
