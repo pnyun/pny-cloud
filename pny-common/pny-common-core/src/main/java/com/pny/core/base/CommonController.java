@@ -31,11 +31,6 @@ public abstract class CommonController<T extends IService, S extends BaseEntity>
         return YunHttpResponse.success((S)baseService.selectById(id)) ;
     }
 
-   /* @GetMapping("id")
-    public MangoYunHttpResponse<Long> getId(){
-        return MangoYunHttpResponse.success(idWorker.nextId()) ;
-    }*/
-
     /**
      * 创建或者更新
      * @param entity
